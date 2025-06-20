@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: ai-chatter
+    env: python
+    buildCommand: ""
+    startCommand: python run.py
+    runtime: python
+    region: oregon
+    plan: free
+    branch: main
+    autoDeploy: true
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: PYTHON_VERSION
+        value: 3.10
